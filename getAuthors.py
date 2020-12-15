@@ -54,6 +54,7 @@ class AuthorThread(threading.Thread):
                 # None of the given IDs matched any Redditor.
                 continue
 
+            # For future reference: If needed, counting child comments can/should be done in this block; Child IDs are a var in the returned data. Perhaps by adding to the iterable
             # Parse the returned data
             for comment in results.children:
                 if hasattr(comment, 'author_fullname'):
